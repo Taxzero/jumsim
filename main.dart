@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-import 'loding_page.dart';
+import 'landing_page.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Loding());
+    return MaterialApp(
+      title: 'jumsim',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const Landing(title: 'jumsim mo mucji?'),
+    );
   }
 }
