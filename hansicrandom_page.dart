@@ -41,7 +41,7 @@ class hansicpage extends StatelessWidget {
                             Radius.circular(30.30),
                           ),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/catoon.png"),
+                              image: AssetImage("assets/images/last.png"),
                               fit: BoxFit.cover)),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,

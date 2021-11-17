@@ -26,10 +26,12 @@ class ButtonPage extends StatelessWidget {
                   height: 550,
                   child: Container(
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30.30),
-                      ),
-                    ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30.30),
+                        ),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/backg.png"),
+                            fit: BoxFit.cover)),
                     child: Padding(
                       padding: const EdgeInsets.all(50.0),
                       child: Column(

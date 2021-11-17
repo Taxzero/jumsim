@@ -31,20 +31,8 @@ class Landing extends StatelessWidget {
                   Radius.circular(30.30),
                 ),
                 image: DecorationImage(
-                    image: AssetImage("assets/images/Backgrounds.jpg"),
+                    image: AssetImage("assets/images/lan.png"),
                     fit: BoxFit.cover)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  width: 200,
-                  height: 100,
-                  child: Image(
-                    image: AssetImage("assets/images/Title.png"),
-                  ),
-                ),
-              ],
-            ),
           ),
         ),
       )),
