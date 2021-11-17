@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:jumsim/all_page.dart';
+import 'package:jumsim/asianrandom.dart';
+import 'package:jumsim/bunsicrandom.dart';
+import 'package:jumsim/fastfoodrandom.dart';
+import 'package:jumsim/hansicrandom_page.dart';
+import 'package:jumsim/ilsicrandom.dart';
+import 'package:jumsim/joongsicrandom.dart';
+import 'package:jumsim/yangsicrandom.dart';
 
 class ButtonPage extends StatelessWidget {
   const ButtonPage({Key? key}) : super(key: key);
@@ -63,7 +69,13 @@ class ButtonPage extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      hansicpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -76,7 +88,13 @@ class ButtonPage extends StatelessWidget {
                                         child: const Text("한식"),
                                       ),
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      yangsicpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -89,7 +107,13 @@ class ButtonPage extends StatelessWidget {
                                         child: const Text("양식"),
                                       ),
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      joongsicpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -108,7 +132,12 @@ class ButtonPage extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) => ilsicpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -121,7 +150,13 @@ class ButtonPage extends StatelessWidget {
                                         child: const Text("일식"),
                                       ),
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      bunsicpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -134,7 +169,12 @@ class ButtonPage extends StatelessWidget {
                                         child: const Text("분식"),
                                       ),
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) => asianpage()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(
@@ -144,7 +184,7 @@ class ButtonPage extends StatelessWidget {
                                             backgroundColor:
                                                 MaterialStateProperty.all(
                                                     Colors.orangeAccent)),
-                                        child: const Text("간식"),
+                                        child: const Text("아시안"),
                                       ),
                                     ],
                                   ),
@@ -166,7 +206,12 @@ class ButtonPage extends StatelessWidget {
                                         child: const Text("샐러드"),
                                       ),
                                       ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) => fastfoodR()));
+                                        },
                                         style: ButtonStyle(
                                             textStyle:
                                                 MaterialStateProperty.all(

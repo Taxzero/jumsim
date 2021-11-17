@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:jumsim/button_page.dart';
 import 'package:jumsim/store.dart';
 
-class joongsicpage extends StatelessWidget {
-  const joongsicpage({Key? key}) : super(key: key);
-  void main(List<String> args) {
-    List<String> joongsic = ['라사천마라탕', '홍차이', '짬뽕타운', '홍성원', '화양연화'];
+class asianpage extends StatelessWidget {
+  const asianpage({Key? key}) : super(key: key);
 
-    var joongsicrandom = (joongsic..shuffle()).first;
+  void main(List<String> args) {
+    List<String> aisian = ['타이반쩜', '드렁킨타이', '포메인', '타이투고'];
+
+    var aisanrandom = (aisian..shuffle()).first;
   }
 
   @override
@@ -39,7 +40,7 @@ class joongsicpage extends StatelessWidget {
                             padding:
                                 const EdgeInsets.only(top: 210, bottom: 200),
                             child: Text(
-                              "${joongsicrandom}",
+                              "${aisanrandom}",
                               style: TextStyle(
                                   fontSize: 20.0, color: Colors.white),
                             ),

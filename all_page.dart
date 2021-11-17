@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jumsim/hansicrandom_page.dart';
+import 'package:jumsim/button_page.dart';
+import 'package:jumsim/store.dart';
 
 class Arandom extends StatelessWidget {
   const Arandom({Key? key}) : super(key: key);
@@ -42,8 +43,6 @@ class Arandom extends StatelessWidget {
     ];
 
     var allin_random = (allrandom..shuffle()).first;
-
-    print(allin_random.toString());
   }
 
   @override
@@ -60,17 +59,43 @@ class Arandom extends StatelessWidget {
                     width: 300,
                     height: 550,
                     child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text("${allin_random}"),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
+                      decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(
                             Radius.circular(30.30),
                           ),
-                        ))))));
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/catoon.png"),
+                              fit: BoxFit.cover)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 210, bottom: 200),
+                            child: Text(
+                              "${allin_random}",
+                              style: TextStyle(
+                                  fontSize: 20.0, color: Colors.white),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => ButtonPage()));
+                            },
+                            style: ButtonStyle(
+                                textStyle: MaterialStateProperty.all(
+                                    const TextStyle(
+                                        fontSize: 14, color: Colors.white)),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.orangeAccent)),
+                            child: const Text("되돌아가기"),
+                          )
+                        ],
+                      ),
+                    )))));
   }
 }
