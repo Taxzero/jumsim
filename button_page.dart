@@ -22,219 +22,234 @@ class ButtonPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: SizedBox(
-                  width: 300,
-                  height: 550,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(30.30),
-                        ),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/backg.png"),
-                            fit: BoxFit.cover)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(50.0),
-                      child: Column(
-                        children: [
+                    width: 300,
+                    height: 550,
+                    child: Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30.30),
+                            ),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/backg.png"),
+                                fit: BoxFit.cover)),
+                        child: Column(children: [
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 30),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => Arandom()));
-                                  },
-                                  splashColor: Colors.brown.withOpacity(0.5),
-                                  child: Ink(
-                                    width: 150,
-                                    height: 50,
-                                    decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/Random_button.png'),
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 50,
+                                        left: 50,
+                                        right: 50,
+                                        bottom: 50),
+                                    child: SizedBox(
+                                      width: 200,
+                                      height: 50,
+                                      child: MaterialButton(
+                                        textColor: Colors.white,
+                                        elevation: 8.0,
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    'assets/images/rb.png'),
+                                                fit: BoxFit.cover),
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      const Arandom()));
+                                        },
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) =>
-                                                      hansicpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("한식"),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) =>
-                                                      yangsicpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("양식"),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) =>
-                                                      joongsicpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("중식"),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) => ilsicpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("일식"),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) =>
-                                                      bunsicpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("분식"),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) => asianpage()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("아시안"),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      ElevatedButton(
-                                        onPressed: () {},
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("샐러드"),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (_) => fastfoodR()));
-                                        },
-                                        style: ButtonStyle(
-                                            textStyle:
-                                                MaterialStateProperty.all(
-                                                    const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white)),
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    Colors.orangeAccent)),
-                                        child: const Text("패스트 푸드"),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ))));
+                                Padding(
+                                    padding: const EdgeInsets.all(5),
+                                    child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                              child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                SizedBox(
+                                                    width: 90,
+                                                    height: 100,
+                                                    child: MaterialButton(
+                                                        child: Container(
+                                                          decoration:
+                                                              const BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    'assets/images/han.png'),
+                                                                fit: BoxFit
+                                                                    .cover),
+                                                          ),
+                                                        ),
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                  builder: (_) =>
+                                                                      const hansicpage()));
+                                                        })),
+                                                SizedBox(
+                                                    width: 90,
+                                                    height: 100,
+                                                    child: MaterialButton(
+                                                        child: Container(
+                                                          decoration:
+                                                              const BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    'assets/images/yang.png'),
+                                                                fit: BoxFit
+                                                                    .cover),
+                                                          ),
+                                                        ),
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                  builder: (_) =>
+                                                                      const yangsicpage()));
+                                                        })),
+                                                SizedBox(
+                                                    width: 90,
+                                                    height: 100,
+                                                    child: MaterialButton(
+                                                        child: Container(
+                                                          decoration:
+                                                              const BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    'assets/images/joong.png'),
+                                                                fit: BoxFit
+                                                                    .cover),
+                                                          ),
+                                                        ),
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                  builder: (_) =>
+                                                                      const joongsicpage()));
+                                                        })),
+                                                Container(
+                                                  child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 90,
+                                                            height: 100,
+                                                            child:
+                                                                MaterialButton(
+                                                                    child:
+                                                                        Container(
+                                                                      decoration:
+                                                                          const BoxDecoration(
+                                                                        image: DecorationImage(
+                                                                            image:
+                                                                                AssetImage('assets/images/il.png'),
+                                                                            fit: BoxFit.cover),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {
+                                                                      Navigator.push(
+                                                                          context,
+                                                                          MaterialPageRoute(
+                                                                              builder: (_) => const ilsicpage()));
+                                                                    })),
+                                                        SizedBox(
+                                                            width: 90,
+                                                            height: 100,
+                                                            child:
+                                                                MaterialButton(
+                                                                    child:
+                                                                        Container(
+                                                                      decoration:
+                                                                          const BoxDecoration(
+                                                                        image: DecorationImage(
+                                                                            image:
+                                                                                AssetImage('assets/images/bun.png'),
+                                                                            fit: BoxFit.cover),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {
+                                                                      Navigator.push(
+                                                                          context,
+                                                                          MaterialPageRoute(
+                                                                              builder: (_) => const bunsicpage()));
+                                                                    })),
+                                                        SizedBox(
+                                                            width: 90,
+                                                            height: 100,
+                                                            child:
+                                                                MaterialButton(
+                                                                    child:
+                                                                        Container(
+                                                                      decoration:
+                                                                          const BoxDecoration(
+                                                                        image: DecorationImage(
+                                                                            image:
+                                                                                AssetImage('assets/images/asi.png'),
+                                                                            fit: BoxFit.cover),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {
+                                                                      Navigator.push(
+                                                                          context,
+                                                                          MaterialPageRoute(
+                                                                              builder: (_) => const asianpage()));
+                                                                    })),
+                                                        Container(
+                                                          child: Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              SizedBox(
+                                                                  width: 90,
+                                                                  height: 100,
+                                                                  child:
+                                                                      MaterialButton(
+                                                                          child:
+                                                                              Container(
+                                                                            decoration:
+                                                                                const BoxDecoration(
+                                                                              image: DecorationImage(image: AssetImage('assets/images/fast.png'), fit: BoxFit.cover),
+                                                                            ),
+                                                                          ),
+                                                                          onPressed:
+                                                                              () {
+                                                                            Navigator.push(context,
+                                                                                MaterialPageRoute(builder: (_) => const fastfoodR()));
+                                                                          })),
+                                                            ],
+                                                          ),
+                                                        )
+                                                      ]),
+                                                )
+                                              ]))
+                                        ]))
+                              ])
+                        ]))))));
   }
 }
